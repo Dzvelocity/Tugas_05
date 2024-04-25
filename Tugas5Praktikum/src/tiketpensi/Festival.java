@@ -1,4 +1,4 @@
-package praktikumpemlan;
+package tiketpensi;
 
 //Kelas turunan untuk tiket Festival
 class Festival extends Tiket {

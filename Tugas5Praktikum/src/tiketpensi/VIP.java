@@ -1,17 +1,17 @@
-package praktikumpemlan;
+package tiketpensi;
 
-//Kelas turunan untuk tiket VVIP
-class VVIP extends Tiket {
-    private static final double HARGA_REGULER = 200.0;
+//Kelas turunan untuk tiket VIP
+class VIP extends Tiket {
+    private static final double HARGA_REGULER = 150.0;
 
-    public VVIP(int jumlah) {
+    public VIP(int jumlah) {
         super(jumlah);
     }
 
     @Override
     public double hitungHarga(boolean presale) {
         if (presale) {
-            // Presale hanya berlaku untuk tiket VVIP
+            // Presale hanya berlaku untuk tiket VIP
             return (HARGA_REGULER * (1 - POTONGAN_PRESALE)) * jumlah;
         } else {
             return HARGA_REGULER * jumlah;
@@ -20,6 +20,6 @@ class VVIP extends Tiket {
 
     @Override
     public String toString() {
-        return "VVIP";
+        return "VIP";
     }
 }

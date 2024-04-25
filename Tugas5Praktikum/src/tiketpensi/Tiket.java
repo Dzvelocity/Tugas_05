@@ -1,4 +1,4 @@
-package praktikumpemlan;
+package tiketpensi;
 
 //Kelas abstrak untuk semua jenis tiket
 abstract class Tiket {

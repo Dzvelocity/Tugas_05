@@ -1,4 +1,4 @@
-package praktikumpemlan;
+package tiketpensi;
 
 import java.util.Scanner;
 

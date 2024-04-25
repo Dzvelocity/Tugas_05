@@ -1,4 +1,4 @@
-package praktikumpemlan;
+package tiketpensi;
 
 //Kelas untuk menyimpan informasi pemesanan tiket
 class Pemesanan {
