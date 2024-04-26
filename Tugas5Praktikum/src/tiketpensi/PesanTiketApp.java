@@ -18,10 +18,8 @@ public class PesanTiketApp {
         scanner.nextLine();
 
         String tahap;
-        double potongan = 0.0;
         if (tahapPembelian == 1) {
             tahap = "Presale";
-            potongan = 0.2; // potongan 20% untuk presale
         } else if (tahapPembelian == 2) {
             tahap = "Reguler";
         } else {
@@ -44,19 +42,15 @@ public class PesanTiketApp {
         scanner.nextLine(); 
 
         String jenis;
-        double harga;
         switch (jenisTiket) {
             case 1:
                 jenis = (tahapPembelian == 1) ? "VIP" : "Festival";
-                harga = (tahapPembelian == 1) ? 150.0 * (1 - potongan) : 100.0;
                 break;
             case 2:
                 jenis = (tahapPembelian == 1) ? "VVIP" : "VIP";
-                harga = (tahapPembelian == 1) ? 200.0 * (1 - potongan) : 150.0;
                 break;
             case 3:
                 jenis = "VVIP";
-                harga = (tahapPembelian == 1) ? 200.0 * (1 - potongan) : 200.0;
                 break;
             default:
                 System.out.println("Input tidak valid!");
@@ -66,7 +60,7 @@ public class PesanTiketApp {
         System.out.print("\nMasukkan jumlah tiket yang ingin dibeli: ");
         int jumlah = scanner.nextInt();
 
-        Pemesanan pesanan = new Pemesanan(nama, tahap, jenis, jumlah, harga);
+        Pemesanan pesanan = new Pemesanan(nama, tahap, jenis, jumlah);
         pesanan.cetakNota();
     }
 }
